@@ -1,6 +1,9 @@
 import styled, { css } from 'styled-components';
-
-export const Container = styled.div`
+interface IContainerProps {
+  isFocused: boolean;
+  isFilled: boolean;
+}
+export const Container = styled.div<IContainerProps>`
   display: flex;
   align-items: center;
 
@@ -38,7 +41,7 @@ export const Container = styled.div`
     flex: 1;
     background: transparent;
     border: 0;
-    color: #b7b7cc;
+    color: #333;
 
     &::placeholder {
       color: #b7b7cc;
